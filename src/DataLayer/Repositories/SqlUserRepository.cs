@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain;
@@ -13,9 +14,7 @@ namespace DataLayer.Repositories {
             this.context = context;
         }
 
-        public User GetUserAsync(Guid id) {
-            throw new NotImplementedException();
-        }
+        public User GetUserAsync(Guid id) => context.Users.SingleOrDefault(u => u.Id == id);
 
         public IEnumerable<User> GetUsersAsync() => context.Users;
 
