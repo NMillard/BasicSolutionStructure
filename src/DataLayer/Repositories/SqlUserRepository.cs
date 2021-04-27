@@ -14,9 +14,7 @@ namespace DataLayer.Repositories {
             this.context = context;
         }
 
-        public Task<User> GetUserAsync(Guid id) {
-            throw new NotImplementedException();
-        }
+        public async Task<User> GetUserAsync(Guid id) => await context.Users.SingleOrDefaultAsync(u => u.Id == id);
 
         public async Task<IEnumerable<User>> GetUsersAsync() => await context.Users.ToListAsync();
 
