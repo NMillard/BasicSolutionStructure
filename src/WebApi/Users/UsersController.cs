@@ -21,6 +21,7 @@ namespace WebApi.Users {
             IEnumerable<User> users = await mediator.Send(new GetAllUsers());
             return Ok(users);
         }
+        
 
         [HttpPost("")]
         public async Task<IActionResult> CreateNewUser(CreateUserModel model) {

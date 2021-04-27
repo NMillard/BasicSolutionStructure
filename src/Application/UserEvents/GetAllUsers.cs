@@ -6,7 +6,7 @@ using Domain;
 using MediatR;
 
 namespace Application.UserEvents {
-    public record GetAllUsers() : IRequest<IEnumerable<User>>; 
+    public record GetAllUsers : IRequest<IEnumerable<User>>; 
     
     public class GetAllUsersHandler : IRequestHandler<GetAllUsers, IEnumerable<User>> {
         private readonly IUserRepository repository;
@@ -15,8 +15,7 @@ namespace Application.UserEvents {
             this.repository = repository;
         }
         
-        public async Task<IEnumerable<User>> Handle(GetAllUsers request, CancellationToken cancellationToken) {
-            return repository.GetUsersAsync();
-        }
+        public async Task<IEnumerable<User>> Handle(GetAllUsers request, CancellationToken cancellationToken) => 
+            await repository.GetUsersAsync();
     }
 }

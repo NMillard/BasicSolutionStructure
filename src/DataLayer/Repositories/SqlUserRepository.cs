@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Application.Interfaces;
 using Domain;
@@ -13,11 +14,14 @@ namespace DataLayer.Repositories {
             this.context = context;
         }
 
-        public User GetUserAsync(Guid id) {
+        public Task<User> GetUserAsync(Guid id) {
             throw new NotImplementedException();
         }
 
-        public IEnumerable<User> GetUsersAsync() => context.Users;
+        public async Task<IEnumerable<User>> GetUsersAsync() => await context.Users.ToListAsync();
+
+        public async Task<IEnumerable<DomainUser>> GetDomainUsersAsync() => (await context.DomainUsers.ToListAsync())
+            .Select(u => (DomainUser) u);
 
         public async Task<bool> CreateUserAsync(User user) {
             await context.AddAsync(user);
