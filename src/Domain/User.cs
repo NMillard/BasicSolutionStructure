@@ -1,20 +1,24 @@
 ﻿using System;
 
 namespace Domain {
-    
     /*
-     * Slightly better.
-     * But accessing the Username value is awkward
+     * Proper encapsulation.
+     *
+     * This is the type of domain model you'd like...
+     * But it's obviously over-simplified.
      */
     public class User {
+        private Username username;
+        
         public User(Username username) {
             Id = Guid.NewGuid();
-            Username = username;
+            this.username = username;
         }
         
         public Guid Id { get; }
-        public Username Username { get; private set; }
+        
+        public string Username => username.Value;
 
-        public void ChangeUsername(Username username) => Username = username;
+        public void ChangeUsername(Username newUsername) => this.username = newUsername;
     }
 }

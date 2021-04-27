@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace DataLayer.Configurations {
-    public class UserConfiguration : IEntityTypeConfiguration<User> {
-        public void Configure(EntityTypeBuilder<User> builder) {
+    public class UserConfiguration : IEntityTypeConfiguration<BetterUser> {
+        public void Configure(EntityTypeBuilder<BetterUser> builder) {
             builder.ToTable("Users");
 
-            builder.HasKey(nameof(User.Id));
+            builder.HasKey(nameof(BetterUser.Id));
             builder.Property(u => u.Username)
                 .IsRequired()
                 .HasMaxLength(100)
@@ -37,7 +37,7 @@ namespace DataLayer.Configurations {
     public class DomainUserPersistence {
         public Guid Id { get; set; }
         public string Username { get; set; }
-        public static implicit operator DomainUser(DomainUserPersistence persistence) => new DomainUser(persistence.Username);
+        public static implicit operator User(DomainUserPersistence persistence) => new User(persistence.Username);
     }
 
     #endregion

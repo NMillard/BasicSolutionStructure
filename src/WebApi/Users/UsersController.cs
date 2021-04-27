@@ -17,7 +17,7 @@ namespace WebApi.Users {
         }
         
         [HttpGet("")]
-        public async Task<ActionResult<IEnumerable<User>>> GetUsers() {
+        public async Task<ActionResult<IEnumerable<BetterUser>>> GetUsers() {
             IEnumerable<User> users = await mediator.Send(new GetAllUsers());
             return Ok(users);
         }
