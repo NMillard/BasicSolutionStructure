@@ -29,7 +29,7 @@ namespace DataLayer.Repositories {
             try {
                 await context.SaveChangesAsync();
                 return true;
-            } catch (DbUpdateException e) {
+            } catch (DbUpdateException) {
                 return false;
             }
         }

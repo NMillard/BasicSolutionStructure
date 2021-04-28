@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{C12900BA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain.Tests", "tests\Domain.Tests\Domain.Tests.csproj", "{1B244A32-8BD6-4255-BDB9-032479DCCDA4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer.Tests", "tests\DataLayer.Tests\DataLayer.Tests.csproj", "{CFB83A49-3973-407D-98A7-9962FB1A7175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,7 @@ Global
 		{0AE55475-B777-46C6-A2B0-5F8A1FE1B138} = {0AEF9A0C-6E00-48B6-B09B-745815D6F2A0}
 		{62D061AF-4160-4935-9547-2B3A7A987AF7} = {6261D990-F1ED-4F0A-90D6-0F70C4F8D23E}
 		{1B244A32-8BD6-4255-BDB9-032479DCCDA4} = {C12900BA-77C4-493C-85D8-0D8C73D307AF}
+		{CFB83A49-3973-407D-98A7-9962FB1A7175} = {C12900BA-77C4-493C-85D8-0D8C73D307AF}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{5240E961-9712-4224-90A2-FF1BC687F3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +61,9 @@ Global
 		{1B244A32-8BD6-4255-BDB9-032479DCCDA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B244A32-8BD6-4255-BDB9-032479DCCDA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B244A32-8BD6-4255-BDB9-032479DCCDA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB83A49-3973-407D-98A7-9962FB1A7175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB83A49-3973-407D-98A7-9962FB1A7175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB83A49-3973-407D-98A7-9962FB1A7175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB83A49-3973-407D-98A7-9962FB1A7175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,12 +1,11 @@
 ﻿using DataLayer.Configurations;
-using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer {
     internal class AppDbContext : DbContext {
-        public AppDbContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<BetterUser> BetterUser { get; set; }
+        // Important to have constructor that takes DbContextOptions
+        public AppDbContext(DbContextOptions options) : base(options) { }
         public DbSet<DomainUserPersistence> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) {
