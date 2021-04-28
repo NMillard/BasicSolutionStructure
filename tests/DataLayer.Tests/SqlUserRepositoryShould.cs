@@ -10,6 +10,8 @@ using Xunit;
 
 /*
  * Install Microsoft.EntityFrameworkCore.InMemory
+ *
+ * Test only the repository's interface - that is, providing X input do I get Y output?
  */
 
 namespace DataLayer.Tests {

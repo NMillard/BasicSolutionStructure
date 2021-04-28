@@ -8,6 +8,9 @@ using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataLayer.Repositories {
+    /*
+     * Simple repository, nothing fancy going on here.
+     */
     internal class SqlUserRepository : IUserRepository {
         private readonly AppDbContext context;
 
