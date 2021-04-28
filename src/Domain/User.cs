@@ -19,6 +19,7 @@ namespace Domain {
         
         public string Username => username.Value;
 
-        public void ChangeUsername(Username newUsername) => this.username = newUsername;
+        public void ChangeUsername(Username newUsername) =>
+            this.username = newUsername;
     }
 }
