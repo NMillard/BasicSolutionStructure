@@ -60,5 +60,23 @@ namespace DataLayer.Tests {
             // Assert
             Assert.NotNull(result);
         }
+
+        [Fact]
+        public async Task GetAllUsers() {
+            var users = new List<DomainUserPersistence>() {
+                new() {Id = Guid.NewGuid(), Username = "test1"},
+                new() {Id = Guid.NewGuid(), Username = "test2"},
+                new() {Id = Guid.NewGuid(), Username = "test3"},
+            };
+            
+            context.Users.AddRange(users);
+            await context.SaveChangesAsync();
+            
+            var sut = new SqlUserRepository(context);
+
+            IEnumerable<User> result = await sut.GetUsersAsync();
+            
+            Assert.Equal(users.Count, result.Count());
+        }
     }
 }
