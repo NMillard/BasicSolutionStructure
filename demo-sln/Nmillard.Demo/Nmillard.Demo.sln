@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nmillard.Demo", "Nmillard.Demo\Nmillard.Demo.csproj", "{02182AF6-058C-45F9-BB08-F6313A7F297B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoTests", "..\DemoTests\DemoTests.csproj", "{954B2A1B-FBEE-4C56-82B2-4D24C5D54927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{02182AF6-058C-45F9-BB08-F6313A7F297B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02182AF6-058C-45F9-BB08-F6313A7F297B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02182AF6-058C-45F9-BB08-F6313A7F297B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02182AF6-058C-45F9-BB08-F6313A7F297B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{954B2A1B-FBEE-4C56-82B2-4D24C5D54927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{954B2A1B-FBEE-4C56-82B2-4D24C5D54927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{954B2A1B-FBEE-4C56-82B2-4D24C5D54927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{954B2A1B-FBEE-4C56-82B2-4D24C5D54927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
